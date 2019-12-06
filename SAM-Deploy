@@ -1,0 +1,7 @@
+1. install AWS CLI
+2. install SAM CLI
+3. AWS configure: specify private key and sereckey of IAM user who have permission to access approriate services and resource
+4. package source code with SAM CLI:
+    - sam package --template-file template.yaml --output-template-file deploy.yaml --s3-bucket <pdomala-sam-demo>
+5. deploy package:
+    - sam deploy --template-file deploy.yaml --capabilities CAPABILITY_IAM --stack-name MySamStackDemo
